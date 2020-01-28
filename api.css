@@ -1,0 +1,137 @@
+body {
+    background-image: url(Image/starwars.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-origin: inherit;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container {
+    width: 100vw;
+    height: 780px;
+    background-color: none;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grandtitre {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.grandtitre h1 {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#logo {
+    width: 100vw;
+    height: 150px;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img {
+    width: 400px;
+    height: 150px;
+    align-self: center;
+}
+
+#text {
+    width: 600px;
+    height: 550px;
+    background-color: none;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#titre {
+    width: 600px;
+    height: 200px;
+    background-color: none;
+    align-self: center;
+    text-align: center;
+}
+
+#buttonb {
+    width: 700px;
+    height: 200px;
+    background-color: none;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn {
+    align-self: center;
+    width: 150px;
+    height: 60px;
+}
+
+.btn-outline-warning {
+    align-self: center;
+}
+
+h1 {
+    font-size: 90px;
+    color: white;
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+}
+
+#tableau {
+    width: 1000px;
+    height: 750px;
+    background-color: none;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#Contenu {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-image: url(Image/blackspace.jpg);
+    color: white;
+}
+
+#Contenu p {
+    color: gold;
+}
+
+#charger {
+    width: 800px;
+    height: 90px;
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+#charger button {
+    align-self: center;
+    width: 150px;
+    height: 60px;
+}
