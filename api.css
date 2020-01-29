@@ -11,9 +11,17 @@ body {
     justify-content: center;
 }
 
+@font-face {
+    font-family: "Star Wars font";
+    src: url(font/STARWARS.TTF);
+}
+
+
+/*------------------------------------ Corpus Page -----------------------------*/
+
 #container {
     width: 100vw;
-    height: 780px;
+    height: 900px;
     background-color: none;
     align-self: center;
     display: flex;
@@ -21,18 +29,128 @@ body {
     justify-content: space-between;
 }
 
+
+/*------------------------------------  Index Page  ---------------------------------*/
+
+#titre h2 {
+    font-family: "Star Wars font";
+    color: black;
+    font-size: 100px;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.8px;
+    -webkit-text-stroke-color: gold;
+}
+
+
+/* ------------------------------------ Grand Titre Toutes pages -------------------------*/
+
 .grandtitre {
     width: 100vw;
-    height: 100px;
+    height: 160px;
+    background-color: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .grandtitre h1 {
-    font-size: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px;
+    color: black;
+    font-family: "Star Wars font";
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: gold;
+    align-self: center;
 }
+
+
+/*-------------------------------------  Contenant Noir  ---------------------------------*/
+
+#Contenu {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    background-image: url(https://media.giphy.com/media/MXQnyEQwBJ6eTj90L5/giphy.gif);
+    color: white;
+    border-width: 10px;
+    border-color: rgb(236, 205, 29);
+    border-bottom-style: groove;
+    border-top-style: groove;
+    border-left-style: groove;
+    border-right-style: groove;
+}
+
+#Contenu p {
+    color: gold;
+}
+
+
+/*------------------------------------- Button Up Button Down ------------------------*/
+
+#charger {
+    width: 800px;
+    height: 210px;
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+#charger button {
+    align-self: center;
+    width: 110px;
+    height: 60px;
+    background-color: grey;
+    color: black;
+    border-color: black;
+}
+
+#buttonb {
+    width: 800px;
+    height: 210px;
+    background-color: none;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a button {
+    align-self: center;
+    width: 150px;
+    height: 60px;
+}
+
+.btn-outline-warning {
+    align-self: center;
+    width: 110px;
+    height: 40px;
+}
+
+#chargerd {
+    width: 800px;
+    height: 210px;
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.example button {
+    width: 50px;
+    height: 30px;
+    align-self: center;
+    border-radius: 10px;
+    background: linear-gradient(rgb(255, 0, 0)rgb(22, 108, 134));
+}
+
+
+/*-----------------------------------------------------------------------------------*/
 
 #logo {
     width: 100vw;
@@ -43,15 +161,9 @@ body {
     justify-content: center;
 }
 
-img {
-    width: 400px;
-    height: 150px;
-    align-self: center;
-}
-
 #text {
     width: 600px;
-    height: 550px;
+    height: 650px;
     background-color: none;
     align-self: center;
     display: flex;
@@ -66,14 +178,8 @@ img {
     text-align: center;
 }
 
-#buttonb {
-    width: 700px;
-    height: 200px;
-    background-color: none;
-    align-self: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#titre p {
+    color: white;
 }
 
 .btn {
@@ -82,13 +188,11 @@ img {
     height: 60px;
 }
 
-.btn-outline-warning {
-    align-self: center;
-}
-
 h1 {
     font-size: 90px;
-    color: white;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: black;
 }
 
 h3 {
@@ -98,40 +202,10 @@ h3 {
 
 #tableau {
     width: 1000px;
-    height: 750px;
+    height: 590px;
     background-color: none;
     align-self: center;
     display: flex;
     flex-direction: column;
-}
-
-#Contenu {
-    width: 800px;
-    height: 600px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-self: center;
-    background-image: url(Image/blackspace.jpg);
-    color: white;
-}
-
-#Contenu p {
-    color: gold;
-}
-
-#charger {
-    width: 800px;
-    height: 90px;
-    background-color: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
-}
-
-#charger button {
-    align-self: center;
-    width: 150px;
-    height: 60px;
 }

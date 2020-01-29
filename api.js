@@ -155,12 +155,12 @@ function infopoke(url) {
 var page = 1
 
 
-function precedenta() {
+function suivant() {
 
-    page--
+    page++
 
 
-    fetch(previouslink)
+    fetch('https://swapi.co/api/people/?page=' + page)
 
     .then(
         function(response) {
@@ -171,15 +171,34 @@ function precedenta() {
     .then(
         function(data) {
 
-            nextlink = data.next
-            previouslink = data.previous
+            var tab = data;
+            var p = document.getElementById('left');
+            p.innerHTML = " ";
+            var right = document.getElementById('right')
+            right.innerHTML = " ";
+            var parent = document.getElementById('information')
+            parent.innerHTML = " ";
 
-            for (let i = 0; i < 9; i++) {
+
+
+
+            for (let i = 0; i <= 9; i++) {
 
                 var span = document.createElement('span');
                 span.innerHTML += "<p>" + tab.results[i].name + "</p>";
                 var p = document.getElementById('left');
+
+
                 p.appendChild(span);
+
+                var infof = document.createElement("p");
+                infof.innerHTML = "voir les stats";
+
+                infof.addEventListener("click", function() {
+                    infopoke(data.results[i].url)
+                })
+                right.appendChild(infof);
+
 
             }
 
@@ -190,6 +209,63 @@ function precedenta() {
 }
 
 
+
+
+
+var page = 1
+
+
+function precedent() {
+
+
+    page--
+
+
+    fetch('https://swapi.co/api/people/?page=' + page)
+
+    .then(
+        function(response) {
+            return response.json()
+        }
+    )
+
+    .then(
+        function(data) {
+
+            var tab = data;
+            var p = document.getElementById('left');
+            p.innerHTML = " ";
+            var right = document.getElementById('right')
+            right.innerHTML = " ";
+            var parent = document.getElementById('information')
+            parent.innerHTML = " ";
+
+
+            for (let i = 0; i <= 9; i++) {
+
+                var span = document.createElement('span');
+                span.innerHTML += "<p>" + tab.results[i].name + "</p>";
+                var p = document.getElementById('left');
+
+
+                p.appendChild(span);
+
+                var infof = document.createElement("p");
+                infof.innerHTML = "voir les stats";
+
+                infof.addEventListener("click", function() {
+                    infopoke(data.results[i].url)
+                })
+                right.appendChild(infof);
+
+
+            }
+
+
+        }
+    )
+
+}
 
 
 
@@ -231,7 +307,7 @@ function chargera() {
                 infof.innerHTML = "voir les stats";
 
                 infof.addEventListener("click", function() {
-                    infopoke(data.results[i].url)
+                    infopokea(data.results[i].url)
                 })
                 right.appendChild(infof);
 
@@ -246,7 +322,7 @@ function chargera() {
 
 
 
-function infopoke(url) {
+function infopokea(url) {
 
     var visible = document.getElementById("information");
     visible.className = "vue"
@@ -354,4 +430,230 @@ function infopoke(url) {
 
 
 
+
+var page = 1
+
+
+function suivanta() {
+
+    page++
+
+
+    fetch('https://swapi.co/api/planets/?page=' + page)
+
+    .then(
+        function(response) {
+            return response.json()
+        }
+    )
+
+    .then(
+        function(data) {
+
+            var tab = data;
+            var p = document.getElementById('left');
+            p.innerHTML = " ";
+            var right = document.getElementById('right')
+            right.innerHTML = " ";
+            var parent = document.getElementById('information')
+            parent.innerHTML = " ";
+
+
+
+
+            for (let i = 0; i <= 9; i++) {
+
+                var span = document.createElement('span');
+                span.innerHTML += "<p>" + tab.results[i].name + "</p>";
+                var p = document.getElementById('left');
+
+
+                p.appendChild(span);
+
+                var infof = document.createElement("p");
+                infof.innerHTML = "voir les stats";
+
+                infof.addEventListener("click", function() {
+                    infopokea(data.results[i].url)
+                })
+                right.appendChild(infof);
+
+
+            }
+
+
+        }
+    )
+
+}
+
+
+
+
+
+var page = 1
+
+
+function precedenta() {
+
+
+    page--
+
+
+    fetch('https://swapi.co/api/planets/?page=' + page)
+
+    .then(
+        function(response) {
+            return response.json()
+        }
+    )
+
+    .then(
+        function(data) {
+
+            var tab = data;
+            var p = document.getElementById('left');
+            p.innerHTML = " ";
+            var right = document.getElementById('right')
+            right.innerHTML = " ";
+            var parent = document.getElementById('information')
+            parent.innerHTML = " ";
+
+
+            for (let i = 0; i <= 9; i++) {
+
+                var span = document.createElement('span');
+                span.innerHTML += "<p>" + tab.results[i].name + "</p>";
+                var p = document.getElementById('left');
+
+
+                p.appendChild(span);
+
+                var infof = document.createElement("p");
+                infof.innerHTML = "voir les stats";
+
+                infof.addEventListener("click", function() {
+                    infopokea(data.results[i].url)
+                })
+                right.appendChild(infof);
+
+
+            }
+
+
+        }
+    )
+
+}
+
+
+
 /*----------------------------------- RECHERCHER --------------------------------------*/
+
+
+
+
+function person() {
+
+    var name = document.getElementById('perso').value;
+
+
+    fetch('https://swapi.co/api/people/?search=' + name)
+
+    .then(
+        function(response) {
+            return response.json()
+        }
+    )
+
+    .then(
+        function(data) {
+
+
+            name = document.getElementById('perso').value;
+            name.innerHTML = " ";
+            var tab = data;
+            var p = document.getElementById('left');
+            p.innerHTML = " ";
+            var right = document.getElementById('right')
+            right.innerHTML = " ";
+            var parent = document.getElementById('information')
+            parent.innerHTML = " ";
+
+
+            for (let i = 0; i <= data.results.length; i++) {
+
+                var span = document.createElement('span');
+                span.innerHTML += "<p>" + tab.results[i].name + "</p>";
+
+                p.appendChild(span);
+
+                var infof = document.createElement("p");
+                infof.innerHTML = "voir les stats";
+
+                infof.addEventListener("click", function() {
+                    infopoke(data.results[i].url)
+                })
+                right.appendChild(infof);
+
+            }
+
+            name.innerHTML = " ";
+
+        }
+    )
+
+}
+
+
+
+function plan() {
+    var name = document.getElementById('planET').value;
+
+
+    fetch('https://swapi.co/api/planets/?search=' + name)
+
+    .then(
+        function(response) {
+            return response.json()
+        }
+    )
+
+    .then(
+        function(data) {
+
+
+            name = document.getElementById('planET').value;
+            name.innerHTML = " ";
+            var tab = data;
+            var p = document.getElementById('left');
+            p.innerHTML = " ";
+            var right = document.getElementById('right')
+            right.innerHTML = " ";
+            var parent = document.getElementById('information')
+            parent.innerHTML = " ";
+
+
+            for (let i = 0; i <= data.results.length; i++) {
+
+                var span = document.createElement('span');
+                span.innerHTML += "<p>" + tab.results[i].name + "</p>";
+
+                p.appendChild(span);
+
+                var infof = document.createElement("p");
+                infof.innerHTML = "voir les stats";
+
+                infof.addEventListener("click", function() {
+                    infopoke(data.results[i].url)
+                })
+                right.appendChild(infof);
+
+            }
+
+            name.innerHTML = " ";
+
+        }
+    )
+
+}

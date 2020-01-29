@@ -33,16 +33,22 @@
             <h1>RECHERCHER</h1>
         </div>
 
-        <div id="charger" data-aos="fade-right">
+        <a href="index.html" class="btn btn-outline-warning" role="button" aria-pressed="true">Accueil</a>
 
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Chercher le jedi ou la planète">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </div>
-            </div>
+        <div id="chargerd" data-aos="fade-right">
+
+
+            <form style="margin:auto;max-width:600px">
+                <input type="text" id="perso" placeholder="Rechercher un personnage">
+                <button type="button" onclick="person()"><i class="fa fa-search"></i></button>
+            </form>
+
+            <form style="margin:auto;max-width:600px">
+                <input type="text" placeholder="Rechercher une planète.." name="Rechercherplanète2" id="planET">
+                <button type="button" onclick="plan()"><i class="fa fa-search"></i></button>
+            </form>
+
+
 
         </div>
 
@@ -74,7 +80,7 @@
             <a href="personnage.html"><button type="button" class="btn btn-success">Personnage</button></a>
             <a href="planete.html"><button type="button" class="btn btn-danger">Planète</button></a>
             <a href="rechercher.html"><button type="button" class="btn btn-dark">Rechercher</button></a>
-            <a href="index.html" class="btn btn-outline-warning" role="button" aria-pressed="true">Accueil</a>
+
 
         </div>
 
